@@ -1,6 +1,8 @@
 # Remove all without extension
 *
 !*.*
+!*/
+
 # Prerequisites
 *.d
 
