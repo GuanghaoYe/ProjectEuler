@@ -1,28 +1,4 @@
-def is_prime(k):
-    if k < 2:
-        return False
-    else:
-        i = 2
-        while i * i <= k:
-            if k % i == 0:
-                return False
-            i += 1
-        return True
-
-
-def get_prime_list(n):
-    is_composite = [False] * (n + 1)
-    primes = list()
-    for i in range(2, n + 1):
-        if not is_composite[i]:
-            primes.append(i)
-        for j in primes:
-            if j * i > n:
-                break
-            is_composite[j * i] = True
-            if i % j == 0:
-                break
-    return primes
+import src.AlgoLibs.numberTheory as nt
 
 
 def lowest_bit(x):
@@ -54,12 +30,12 @@ def get_smallest_prime(p):
             if s[j] == '*':
                 s[j] = str(i)
         number = int(''.join(s))
-        if is_prime(number):
+        if nt.is_prime_naive(number):
             return number
 
 
 def main():
-    primes = get_prime_list(1000000)
+    primes = nt.prime_linear_sieve(1000000)
     pattern_dict = dict()
     for prime in primes:
         patterns = get_patterns(prime)
