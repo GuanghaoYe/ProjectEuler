@@ -6,6 +6,12 @@
 # Prerequisites
 *.d
 
+# Remove Binaries
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+
+
 # Compiled Object files
 *.slo
 *.lo
