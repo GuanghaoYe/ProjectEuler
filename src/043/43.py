@@ -1,6 +1,6 @@
 import itertools
 from functools import reduce
-import src.AlgoLibs.numberTheory as nt
+import src.algolib.number_theory as nt
 
 check_list = nt.prime_linear_sieve(18)
 

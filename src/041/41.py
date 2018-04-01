@@ -1,4 +1,4 @@
-import src.AlgoLibs.numberTheory as nt
+import src.algolib.number_theory as nt
 import itertools
 
 
